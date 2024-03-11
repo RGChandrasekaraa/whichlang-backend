@@ -1,4 +1,5 @@
 flask
 langdetect
 flask-cors
+gunicorn
 pycountry
