@@ -1,46 +1,93 @@
-WhichLang Backend
-This is the backend component of the WhichLang project, a language detection application.
+# WhichLang Backend
 
-Overview
-The WhichLang backend is built with Flask, a lightweight WSGI web application framework, and serves as the API endpoint for language detection.
+## Overview
 
-Features
-Language detection endpoint
-Error handling for invalid requests
-Logging of errors for debugging
-Getting Started
-To get started with the WhichLang backend, follow these steps:
+This repository contains the backend component of the WhichLang project, an application for language detection. The backend is built using Flask, a Python web framework.
 
-Clone this repository to your local machine:
+## Features
 
-bash
-Copy code
-git clone https://github.com/RGChandrasekaraa/whichlang-backend.git
-Install the required dependencies using pip:
+- Provides an API endpoint for language detection
+- Handles invalid requests and unexpected errors
+- Logs errors for debugging purposes
 
-bash
-Copy code
-pip install -r requirements.txt
-Start the Flask server:
+## Getting Started
 
-bash
-Copy code
-python run.py
-The backend server should now be running locally at http://127.0.0.1:5000.
+Follow these instructions to set up and run the WhichLang backend on your local machine.
 
-Usage
-To use the language detection endpoint, send a POST request to /detect_language with a JSON payload containing the text to analyze. Here's an example using cURL:
+### Prerequisites
 
-bash
-Copy code
-curl -X POST http://127.0.0.1:5000/detect_language -H "Content-Type: application/json" -d '{"text": "Your text here"}'
+- Python 3.x installed on your system
+- pip package manager
+
+### Installation
+
+1. Clone the repository:
+
+   \`\`\`bash
+   git clone https://github.com/RGChandrasekaraa/whichlang-backend.git
+   \`\`\`
+
+2. Navigate to the project directory:
+
+   \`\`\`bash
+   cd whichlang-backend
+   \`\`\`
+
+3. Install dependencies:
+
+   \`\`\`bash
+   pip install -r requirements.txt
+   \`\`\`
+
+### Usage
+
+1. Start the Flask server:
+
+   \`\`\`bash
+   python run.py
+   \`\`\`
+
+2. The backend server will now be running locally at \`http://127.0.0.1:5000\`.
+
+3. To use the language detection endpoint, send a POST request to \`/detect_language\` with a JSON payload containing the text to analyze.
+
+### Example Request
+
+\`\`\`bash
+curl -X POST http://127.0.0.1:5000/detect_language \\
+-H "Content-Type: application/json" \\
+-d '{"text": "Your text here"}'
+\`\`\`
+
+### Response
+
 The server will respond with a JSON object containing the detected language.
 
-Error Handling
-The backend includes error handling for invalid requests and unexpected errors. If a request is invalid or an unexpected error occurs, the server will respond with an appropriate error message.
+## Contributing
 
-Contributing
-Contributions are welcome! If you'd like to contribute to the development of the WhichLang backend, please fork this repository, make your changes, and submit a pull request.
+Contributions to the WhichLang backend are welcome! If you'd like to contribute, please follow these steps:
 
-License
-This project is licensed under the MIT License.
+1. Fork the repository.
+2. Create your feature branch:
+
+   \`\`\`bash
+   git checkout -b feature/my-feature
+   \`\`\`
+
+3. Commit your changes:
+
+   \`\`\`bash
+   git commit -am 'Add some feature'
+   \`\`\`
+
+4. Push to the branch:
+
+   \`\`\`bash
+   git push origin feature/my-feature
+   \`\`\`
+
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License
